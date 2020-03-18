@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Users Page !</title>
+  </head>
+  <body>
+    <h1>Here are your Users For Djan_App !</h1>
+
+      {% if users %}
+          <ol>
+
+            {% for person in users %}
+            <li>User Info</li>
+              <ul>
+                <li>First Name :{{person.First_Name}}</li>
+                <li>Last Name :{{person.Second_Name}}</li>
+                <li>Email :{{person.E_mail}}</li>
+              </ul>
+
+              {% endfor %}
+
+          </ol>
+        {% endif %}
+  </body>
+</html>
